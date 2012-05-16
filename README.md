@@ -6,16 +6,16 @@ There is a rudimentary drop to a [vagrant shell provisioner](http://vagrantup.co
 Vagrant baseboxes build with vagrant 1.0.3, veewee 0.2.3, vbox 4.1.14.
 
 #### Quickstart
-[install vagrant](http://vagrantup.com/docs/getting-started/index.html)
-```mkdir -p ~/Vagrant/cf3
-curl -s -o ~/Vagrant/cf3/Vagrantfile https://raw.github.com/filler/vagrant-cfengine/Vagrantfile
-cd ~/Vagrant/cf3/
-vagrant up cfhub```
+  $ git clone git://github.com/filler/vagrant-cfengine.git
+  $ cd vagrant-cfengine
+  $ vagrant up
 
 #### Using the shell provisioner, local inputs/bundles
-```cd ~/Vagrant/cf3/
-git clone git@github.com:filler/my-awesome-cf3-code.git masterfiles
-vi Vagrantfile # open up vm.share_folder and vm.provision```
+  $ git clone git://github.com/filler/vagrant-cfengine.git && cd vagrant-cfengine
+  $ git clone git@github.com:filler/my-awesome-cf3-code.git masterfiles
+  $ vi Vagrantfile # uncomment share + provision
+  $ vi cfengine3.sh # as appropriate for null routes, tree manipulation, classes to invoke
+  $ vagrant up
 
 [1]: Done with EPEL packages since community binary installers arent readily accessible.
 [2]: A proper provisioner would rule.
